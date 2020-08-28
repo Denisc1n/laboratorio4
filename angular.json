@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "applabo4"
+    }
+  },
+  "defaultProject": "applabo4",
+  "cli": {
+    "analytics": false
+  }
 }
