@@ -1,0 +1,11 @@
+<div>
+  <br />
+  Usuario:<input type="text" [(ngModel)]="username" />
+  <br />
+  Contraseña:<input type="text" [(ngModel)]="password" />
+  <br />
+  <button type="button" [disabled]="!username || !password" (click)="login()">
+    Iniciar Sesión
+  </button>
+  <h4>Credenciales de prueba-> usuario:admin - contraseña: admin</h4>
+</div>
