@@ -5,7 +5,8 @@ import { BienvenidoComponent } from './pages/bienvenido/bienvenido.component';
 import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'bienvenido', component: BienvenidoComponent },
   { path: 'error', component: ErrorComponent },
 ];
