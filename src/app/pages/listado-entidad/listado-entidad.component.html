@@ -1,0 +1,26 @@
+<table
+  class="table table-striped"
+  class="mat-elevation-z8"
+  style="width: 100%; padding: 10px"
+>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nombre</th>
+      <th style="text-align: left">Región</th>
+      <th style="text-align: left">Bandera</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of countries">
+      <td style="width: 10%">
+        <button (click)="seleccionarEntidad(country)">
+          {{ country.name }}
+        </button>
+      </td>
+      <td style="width: 10%">{{ country.region }}</td>
+      <td style="width: 40%">
+        <img [src]="country.flag" alt="" style="width: 200px; height: 100px" />
+      </td>
+    </tr>
+  </tbody>
+</table>

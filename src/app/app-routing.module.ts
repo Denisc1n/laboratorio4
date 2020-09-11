@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { BienvenidoComponent } from './pages/bienvenido/bienvenido.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { PaisesComponent } from './pages/paises/paises.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'bienvenido', component: BienvenidoComponent },
   { path: 'error', component: ErrorComponent },
+  { path: 'paises', component: PaisesComponent },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bienvenido',
@@ -11,7 +12,7 @@ export class BienvenidoComponent implements OnInit {
   public resultadoSuma = 0;
   public resultadoPromedio = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -26,5 +27,9 @@ export class BienvenidoComponent implements OnInit {
     this.resultadoPromedio = 0;
     this.valorDos = 0;
     this.valorUno = 0;
+  }
+
+  moduloPaises() {
+    this.router.navigate(['/paises']);
   }
 }
