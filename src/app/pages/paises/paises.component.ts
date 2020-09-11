@@ -12,6 +12,7 @@ export class PaisesComponent implements OnInit {
 
   public countries: Object[];
 
+  public paisSeleccionado: Object;
   ngOnInit() {
     this.getCountries();
   }
@@ -24,5 +25,6 @@ export class PaisesComponent implements OnInit {
 
   receiveEvent(dataReceived): void {
     console.log(dataReceived);
+    this.paisSeleccionado = dataReceived;
   }
 }
