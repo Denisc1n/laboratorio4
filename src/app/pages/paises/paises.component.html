@@ -1,5 +1,10 @@
+<app-detalle-entidad
+  [pais]="paisSeleccionado"
+  (salidaPais)="handleSalidaPais($event)"
+></app-detalle-entidad>
+<div></div>
 <app-listado-entidad
   (selectedCountry)="receiveEvent($event)"
   [countries]="countries"
 ></app-listado-entidad>
-<div></div>
+<app-listado-entidad [countries]="countriesDeleted"></app-listado-entidad>

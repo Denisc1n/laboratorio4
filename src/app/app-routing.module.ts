@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BienvenidoComponent } from './pages/bienvenido/bienvenido.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { PaisesComponent } from './pages/paises/paises.component';
+import { DetalleEntidadComponent } from './pages/detalle-entidad/detalle-entidad.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'bienvenido', component: BienvenidoComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'paises', component: PaisesComponent },
+  { path: 'detalle', component: DetalleEntidadComponent },
 ];
 
 @NgModule({

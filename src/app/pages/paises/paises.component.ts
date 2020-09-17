@@ -11,8 +11,8 @@ export class PaisesComponent implements OnInit {
   constructor(private countryService: CountriesService) {}
 
   public countries: Object[];
-
   public paisSeleccionado: Object;
+  public countriesDeleted = new Array();
   ngOnInit() {
     this.getCountries();
   }
@@ -24,7 +24,13 @@ export class PaisesComponent implements OnInit {
   }
 
   receiveEvent(dataReceived): void {
-    console.log(dataReceived);
     this.paisSeleccionado = dataReceived;
+  }
+
+  handleSalidaPais(pais): void {
+    this.countries = this.countries.filter((paisAux) => paisAux != pais);
+    if (!this.countriesDeleted.includes(pais)) {
+      this.countriesDeleted.push(pais);
+    }
   }
 }

@@ -1,0 +1,17 @@
+<h1>DETALLE</h1>
+<div *ngIf="pais">
+  <app-boton-entidad
+    [entidad]="pais"
+    (salida)="handlePais($event)"
+  ></app-boton-entidad>
+  <h2>{{ pais.name | uppercase }} Detalles</h2>
+  <div><span>id: </span>{{ pais.code }}</div>
+  <div>
+    <label
+      >Pais:
+      <input [(ngModel)]="pais.name" placeholder="nombre" />
+    </label>
+  </div>
+  <p><button (click)="save()">Guardar</button></p>
+  <button (click)="goBack()">Volver</button>
+</div>

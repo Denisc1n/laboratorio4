@@ -25,8 +25,16 @@ export class CountriesService {
     );
   }
 
+  getCountriesById(id: string): Observable<Country> {
+    const url = `${this.countriesUrl}/${id}`;
+    return this.http.get<Country>(url).pipe(
+      tap((_) => this.log(`Country Service: fetched country code=${id}`)),
+      catchError(this.handleError<Country>(`getCountryById id=${id}`))
+    );
+  }
+
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`country service: ${message}`);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
